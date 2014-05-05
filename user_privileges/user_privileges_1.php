@@ -1,0 +1,9 @@
+<?php
+
+
+//This is the access privilege file
+$is_admin=true;
+
+$user_info=array('user_name'=>'admin','is_admin'=>'on','user_password'=>'$1$ad$hsl2KFybNRnbXBa.b.WWv.','confirm_password'=>'$1$ad$peilFE10wX.4b0aIm7/.t/','first_name'=>'','last_name'=>'Administrator','roleid'=>'H2','email1'=>'jitu8988@gmail.com','status'=>'Active','activity_view'=>'This Week','lead_view'=>'Today','hour_format'=>'12','end_hour'=>'23:00','start_hour'=>'00:00','title'=>'Enterprise','phone_work'=>'','department'=>'Gurgaon','phone_mobile'=>'9799046708','reports_to_id'=>'','phone_other'=>'Jitendra Singh','email2'=>'jitendras@techfoursolutions.com','phone_fax'=>'','secondaryemail'=>'','phone_home'=>'Lalit Kumar','date_format'=>'yyyy-mm-dd','signature'=>'','description'=>'','address_street'=>'','address_city'=>'','address_state'=>'','address_postalcode'=>'','address_country'=>'','accesskey'=>'MGbp4Wpe7hEINGtx','time_zone'=>'Asia/Kolkata','currency_id'=>'1','currency_grouping_pattern'=>'123,456,789','currency_decimal_separator'=>'.','currency_grouping_separator'=>',','currency_symbol_placement'=>'$1.0','imagename'=>'','internal_mailer'=>'1','theme'=>'woodspice','language'=>'en_us','reminder_interval'=>'1 Minute','no_of_currency_decimals'=>'2','truncate_trailing_zeros'=>'1','dayoftheweek'=>'Sunday','callduration'=>'10','othereventduration'=>'5','calendarsharedtype'=>'public','default_record_view'=>'Summary','leftpanelhide'=>'0','rowheight'=>'medium','ccurrency_name'=>'','currency_code'=>'INR','currency_symbol'=>'?','conv_rate'=>'1.00000','record_id'=>'','record_module'=>'','currency_name'=>'India, Rupees','id'=>'1');
+
+?>
