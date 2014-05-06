@@ -711,7 +711,7 @@ Class Vtiger_Edit_View extends Vtiger_Index_View {
                     $PAYMENT_LIST[$i]['checkno'] = $row['checkno'];
                     $PAYMENT_LIST[$i]['ro_available'] = $row['ro_available'];
                     $PAYMENT_LIST[$i]['bank_name'] = $row['bank_name'];
-                    $PAYMENT_LIST[$i]['amount'] = number_format($row['amount'],2);
+                    $PAYMENT_LIST[$i]['amount'] = $row['amount'];
 
                     $PAYMENT_LIST[$i]['onlinemode'] = $row['onlinemode'];
                     $PAYMENT_LIST[$i]['slip_number'] = $row['slip_number'];
