@@ -25,13 +25,13 @@ class Potentials_CheckDuplicate_Action extends Vtiger_Action_Controller {
             $recordModel = Vtiger_Record_Model::getCleanInstance($moduleName);
         }
 
-        $recordModel->set('accountname', $accountName);
+        $response_result = $recordModel->checkDuplicate();
 
-        if (!$recordModel->checkDuplicate()) {
+        if ($response_result != "") {
+            $result = array('success'=>true, 'message'=>vtranslate('LBL_DUPLICATES_EXIST', $moduleName),'error_message'=>$response_result,'error_status'=>1);
+        } else
             $result = array('success'=>false);
-        } else {
-            $result = array('success'=>true, 'message'=>vtranslate('LBL_DUPLICATES_EXIST', $moduleName));
-        }
+
         $response = new Vtiger_Response();
         $response->setResult($result);
         $response->emit();
