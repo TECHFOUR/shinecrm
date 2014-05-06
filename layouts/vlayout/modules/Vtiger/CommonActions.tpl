@@ -34,41 +34,51 @@
                                     <img src="{vimage_path('circle_question_mark.png')}" class="alignMiddle" alt="?" title="{vtranslate('LBL_GUIDER',$MODULE)}" style="display:none;"/>
                                 {/if}
                             </div>&nbsp;
-
-                            <div class="btn-group cursorPointer">
-                                <img id="menubar_quickCreate" src="{vimage_path('btnAdd.png')}" class="alignMiddle" alt="{vtranslate('LBL_QUICK_CREATE',$MODULE)}" title="{vtranslate('LBL_QUICK_CREATE',$MODULE)}" data-toggle="dropdown" />
-                                <ul class="dropdown-menu dropdownStyles commonActionsButtonDropDown">
-                                    <li class="title"><strong>{vtranslate('Quick Create',$MODULE)}</strong></li><hr/>
-                                    <li id="quickCreateModules">
-                                        <div class="row-fluid">
-                                            <div class="span12">
-                                                {foreach key=moduleName item=moduleModel from=$MENUS}
-                                                    {if $moduleModel->isPermitted('EditView')}
-                                                        {assign var='quickCreateModule' value=$moduleModel->isQuickCreateSupported()}
-                                                        {assign var='singularLabel' value=$moduleModel->getSingularLabelKey()}
-														{if $singularLabel == 'SINGLE_Calendar'}
-															{assign var='singularLabel' value='LBL_EVENT_OR_TASK'}
-														{/if}	
-                                                        {if $quickCreateModule == '1'}
-                                                            {if $count % 3 == 0}
-                                                                <div class="row-fluid">
+                            {*<!--Change by Raghvender Singh on 05052014-->*}
+                            {if $USER_MODEL->isAdminUser()}
+                                <div class="btn-group cursorPointer">
+                                    <img id="menubar_quickCreate" src="{vimage_path('btnAdd.png')}" class="alignMiddle" alt="{vtranslate('LBL_QUICK_CREATE',$MODULE)}" title="{vtranslate('LBL_QUICK_CREATE',$MODULE)}" data-toggle="dropdown" />
+                                    <ul class="dropdown-menu dropdownStyles commonActionsButtonDropDown">
+                                        <li class="title"><strong>{vtranslate('Quick Create',$MODULE)}</strong></li><hr/>
+                                        <li id="quickCreateModules">
+                                            <div class="row-fluid">
+                                                <div class="span12">
+                                                    {foreach key=moduleName item=moduleModel from=$MENUS}
+                                                        {if $moduleModel->isPermitted('EditView')}
+                                                            {assign var='quickCreateModule' value=$moduleModel->isQuickCreateSupported()}
+                                                            {assign var='singularLabel' value=$moduleModel->getSingularLabelKey()}
+                                                            {if $singularLabel == 'SINGLE_Calendar'}
+                                                                {assign var='singularLabel' value='LBL_EVENT_OR_TASK'}
+                                                            {/if}
+                                                            {if $quickCreateModule == '1'}
+                                                                {if $count % 3 == 0}
+                                                                    <div class="row-fluid">
                                                                 {/if}
                                                                 <div class="span4">
                                                                     <a id="menubar_quickCreate_{$moduleModel->getName()}" class="quickCreateModule" data-name="{$moduleModel->getName()}"
                                                                        data-url="{$moduleModel->getQuickCreateUrl()}" href="javascript:void(0)">{vtranslate($singularLabel,$moduleName)}</a>
                                                                 </div>
                                                                 {if $count % 3 == 2}
-                                                                </div>
+                                                                    </div>
+                                                                {/if}
+                                                                {assign var='count' value=$count+1}
                                                             {/if}
-                                                            {assign var='count' value=$count+1}
                                                         {/if}
-                                                    {/if}
-                                                {/foreach}
+                                                    {/foreach}
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>&nbsp;
+                                        </li>
+                                    </ul>
+                                </div>
+                                &nbsp;
+
+                            {else}
+                                &nbsp;
+                            {/if}
+                            {*<!--End Change by Raghvender Singh on 05052014-->*}
+
+
+
                         </div>
                     </div>
                 </div>
