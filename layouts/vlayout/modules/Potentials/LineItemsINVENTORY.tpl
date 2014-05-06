@@ -172,7 +172,7 @@
             </td>
 
             <td>
-                <input class="textwidth noofemailer_inventory" maxlength="5" id="noofemailer_inventory__{$counter}" type="text" name="noofemailer_inventory[]" value="{$data.noofemailer}" onkeyup="getNewMRPBottomPrice(this.id, this.value, 'inventory');"  placeholder="No. of Emailers" title="No. of Emailers" data-validation-engine="validate[required,funcCall[Vtiger_Base_Validator_Js.invokeValidation]]" />
+                <input class="textwidth noofemailer_inventory" maxlength="7" id="noofemailer_inventory__{$counter}" type="text" name="noofemailer_inventory[]" value="{$data.noofemailer}" onkeyup="getNewMRPBottomPrice(this.id, this.value, 'inventory');"  placeholder="No. of Emailers" title="No. of Emailers" data-validation-engine="validate[required,funcCall[Vtiger_Base_Validator_Js.invokeValidation]]" />
             </td>
         </tr>
 
