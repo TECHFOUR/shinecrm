@@ -720,7 +720,7 @@ Class Vtiger_Edit_View extends Vtiger_Index_View {
                     $i++;
                 }
                 $counter_payment_assign = $i -1 ;
-            }
+             }
 // end for payment ***********************************
             // start for sales Approval edit condition ***********************************
             $edit_permission = 0;
