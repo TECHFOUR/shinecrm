@@ -719,6 +719,7 @@ Class Vtiger_Edit_View extends Vtiger_Index_View {
                     $PAYMENT_LIST[$i]['cts'] = $row['cts'];
                      $i++;
                 }
+                fgdfgfdg
                 $counter_payment_assign = $i -1 ;
               }
 // end for payment ***********************************
