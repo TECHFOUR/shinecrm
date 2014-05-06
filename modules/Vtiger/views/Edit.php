@@ -717,7 +717,7 @@ Class Vtiger_Edit_View extends Vtiger_Index_View {
                     $PAYMENT_LIST[$i]['slip_number'] = $row['slip_number'];
                     $PAYMENT_LIST[$i]['tan_no'] = $row['tan_no'];
                     $PAYMENT_LIST[$i]['cts'] = $row['cts'];
-                    $i++;
+                     $i++;
                 }
                 $counter_payment_assign = $i -1 ;
               }
