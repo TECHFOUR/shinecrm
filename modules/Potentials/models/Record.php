@@ -22,6 +22,9 @@ class Potentials_Record_Model extends Vtiger_Record_Model {
     public function checkDuplicate() {
         $db = PearDatabase::getInstance();
         $csaf_no = $_REQUEST['accountname'];
+        $error_message = "";
+        if(strlen($csaf_no) != 7)
+            $error_message = "Length of CSAF No. must be 7 digits only";
         $query = "SELECT 1 FROM vtiger_potential
                     INNER JOIN vtiger_crmentity ON vtiger_crmentity.crmid = vtiger_potential.potentialid
                     WHERE setype = ? AND potentialname = ? AND deleted = 0";
@@ -35,9 +38,9 @@ class Potentials_Record_Model extends Vtiger_Record_Model {
 
         $result = $db->pquery($query, $params);
         if ($db->num_rows($result)) {
-            return true;
+            $error_message .= " Same CSAF No already exist in the system.";
         }
-        return false;
+        return $error_message;
     }
 
 	/**
