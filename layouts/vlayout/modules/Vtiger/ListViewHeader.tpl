@@ -31,7 +31,7 @@
 				<span class="btn-toolbar span4">
 
 					<span class="btn-group listViewMassActions">
-							
+
 						{if count($LISTVIEW_MASSACTIONS) gt 0 || $LISTVIEW_LINKS['LISTVIEW']|@count gt 0}
                         {*<!--Add by Raghvender Singh on 05052014-->*}
                             {if $USER_MODEL->isAdminUser()}
@@ -71,9 +71,11 @@
 
                     {foreach item=LISTVIEW_BASICACTION from=$LISTVIEW_LINKS['LISTVIEWBASIC']}
                     {*<!--Add by Raghvender Singh 30042014-->*}
-                        {if $MODULE == 'Potentials'}
+
+                         {if $MODULE == 'Potentials'}
 
                         {else if $MODULE == 'Leads'}
+                        {else if $MODULE == 'Calendar'}
 
                         {else}
                             <span class="btn-group">
