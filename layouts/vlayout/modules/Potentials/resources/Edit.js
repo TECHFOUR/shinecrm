@@ -7,6 +7,8 @@
  * All Rights Reserved.
  *************************************************************************************/
 
+var error_custom_status = "";
+var error_custom_message = 0;
 var expected_revenue_msg = "";
 var total_active_Row = 0;
 var total_sequence_Row = 0;
@@ -90,9 +92,11 @@ Vtiger_Edit_Js("Potentials_Edit_Js",{
                     function(data, err){
                         thisInstance.duplicateCheckCache[accountName] = data['success'];
                         thisInstance.duplicateCheckCache['message'] = data['message'];
+                        error_custom_message = data['error_message'];
+                        error_custom_status = data['error_status'];
                         var message = app.vtranslate('JS_DUPLICTAE_CSAF_No_EXIT');
                         delete thisInstance.duplicateCheckCache[accountName];
-                        Vtiger_Helper_Js.showConfirmationBoxCustom({'message' : message}).then(
+                        Vtiger_Helper_Js.showConfirmationBoxContactCustom({'message' : message}).then(
                             function(e) {
                                 thisInstance.duplicateCheckCache[accountName] = false;
                                 form.submit();
@@ -109,7 +113,7 @@ Vtiger_Edit_Js("Potentials_Edit_Js",{
                 if(thisInstance.duplicateCheckCache[accountName] == true){
                     var message = app.vtranslate('JS_DUPLICTAE_CSAF_No_EXIT');
                     delete thisInstance.duplicateCheckCache[accountName];
-                    Vtiger_Helper_Js.showConfirmationBoxCustom({'message' : message}).then(
+                    Vtiger_Helper_Js.showConfirmationBoxContactCustom({'message' : message}).then(
                         function(e) {
                             thisInstance.duplicateCheckCache[accountName] = false;
                             form.submit();
