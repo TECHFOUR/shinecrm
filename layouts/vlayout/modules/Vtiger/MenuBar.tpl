@@ -148,4 +148,4 @@
 	<input type="hidden" value="{$PARENT_MODULE}" id="parent" name='parent' />
 	<input type='hidden' value="{$VIEW}" id='view' name='view'/>
 {/strip}
-I am testing here..............
+I am testing here..............fhfghgf
