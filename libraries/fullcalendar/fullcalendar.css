@@ -53,7 +53,7 @@ html .fc,
 	width: 25%;
 	text-align: right;
 	}
-/*Add by Raghvender Singh on 05052014*/
+/*Add by Raghvender Singh on 05052014 */
 .fc-header-right span.pull-left .addButton, .fc-header-right span.pull-right{
     display:none !important;
 }
