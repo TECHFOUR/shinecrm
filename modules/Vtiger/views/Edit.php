@@ -722,7 +722,7 @@ Class Vtiger_Edit_View extends Vtiger_Index_View {
                 $counter_payment_assign = $i -1 ;
               }
 // end for payment ***********************************
-            // start for sales Approval edit condition ***********************************
+            // start for sales Approval edit condition **********************************
             $edit_permission = 0;
             $approval_qry = $adb->query("SELECT final_approval, potcrmentity.smownerid as ownerid, vtiger_crmentity.smownerid as lastactionuserid, approval_status, u2.id as reportto_id FROM vtiger_servicecontractscf
                                                 INNER JOIN vtiger_crmentity ON vtiger_crmentity.crmid = vtiger_servicecontractscf.servicecontractsid
