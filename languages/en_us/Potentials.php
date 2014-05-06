@@ -59,5 +59,5 @@ $languageStrings = array(
 );
 
 $jsLanguageStrings = array(
-    'JS_DUPLICTAE_CSAF_No_EXIT' => 'Same CSAF No already exist in the system.'
+    'JS_DUPLICTAE_CSAF_No_EXIT' => ''
 );
