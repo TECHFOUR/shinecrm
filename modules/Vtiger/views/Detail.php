@@ -597,7 +597,7 @@ INNER JOIN vtiger_leadscf ON vtiger_leadscf.leadid = vtiger_crmentityrel.relcrmi
         $viewer->assign('MODULE_MODEL', $this->record->getModule());
         $viewer->assign('DETAILVIEW_LINKS', $detailViewLinks);
 
-        $viewer->view('DetailViewPostProcess.tpl', $moduleName);
+        //$viewer->view('DetailViewPostProcess.tpl', $moduleName);
 // Add by Raghvender Singh on 03052014
 		if($moduleName == 'Leads'){			
 			}
